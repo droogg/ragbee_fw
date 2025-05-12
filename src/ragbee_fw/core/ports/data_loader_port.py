@@ -1,10 +1,14 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import List, Protocol
 
 from src.ragbee_fw.core.models.document import Document
 
 
-class DataLoaderPort(ABC):
+class DataLoaderPort(Protocol):
+    def load(self, path: str) -> List[Document]: ...
+
+
+class BaseDataLoader(ABC, DataLoaderPort):
     @abstractmethod
     def load(self, path: str) -> List[Document]:
         """Reads all documents from the given path (file or folder)"""

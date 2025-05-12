@@ -19,10 +19,10 @@ from typing import List, Union
 from charset_normalizer import from_bytes
 
 from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.data_loader_port import DataLoaderPort
+from src.ragbee_fw.core.ports.data_loader_port import BaseDataLoader
 
 
-class FileSystemLoader(DataLoaderPort):
+class FileSystemLoader(BaseDataLoader):
     """Load text/markdown documents from the local filesystem.
 
     The loader accepts either a single path to a file or a directory.
