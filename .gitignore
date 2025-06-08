@@ -1,6 +1,7 @@
 scripts/
 notebook/
 documents/
+bm25_index.pkl
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
