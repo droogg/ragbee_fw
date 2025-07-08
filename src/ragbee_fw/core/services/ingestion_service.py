@@ -8,10 +8,10 @@ retrievers."""
 
 from typing import Sequence
 
-from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.data_loader_port import DataLoaderPort
-from src.ragbee_fw.core.ports.retriever_port import RetrieverPort
-from src.ragbee_fw.core.ports.splitter_port import TextSplitterPort
+from ragbee_fw.core.models.document import Document
+from ragbee_fw.core.ports.data_loader_port import DataLoaderPort
+from ragbee_fw.core.ports.retriever_port import RetrieverPort
+from ragbee_fw.core.ports.splitter_port import TextSplitterPort
 
 
 class IngestionService:

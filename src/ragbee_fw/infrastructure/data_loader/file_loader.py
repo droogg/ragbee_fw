@@ -18,8 +18,8 @@ from typing import List, Union
 
 from charset_normalizer import from_bytes
 
-from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.data_loader_port import BaseDataLoader
+from ragbee_fw.core.models.document import Document
+from ragbee_fw.core.ports.data_loader_port import BaseDataLoader
 
 
 class FileSystemLoader(BaseDataLoader):

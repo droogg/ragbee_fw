@@ -16,8 +16,8 @@ Typical usage example:
 
 from typing import List, Optional, Union
 
-from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.splitter_port import BaseTextSplitter
+from ragbee_fw.core.models.document import Document
+from ragbee_fw.core.ports.splitter_port import BaseTextSplitter
 
 
 class RecursiveTextSplitter(BaseTextSplitter):

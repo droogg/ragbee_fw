@@ -1,12 +1,15 @@
 [project]
 name = "ragbee-fw"
 version = "0.1.0"
-description = ""
+description = "Lightweight RAG framework"
 authors = [
-    {name = "shevchenko v.a."}
+    {name = "shevchenko v.a.", email="droogg@mail.ru"}
 ]
+license = "MIT"
 readme = "README.md"
+keywords = ["rag", "llm", "retrieval", "framework"]
 requires-python = ">=3.10"
+
 dependencies = [
     "huggingface-hub (>=0.31.1,<0.32.0)",
     "charset-normalizer (>=3.4.2,<4.0.0)",
@@ -14,6 +17,15 @@ dependencies = [
     "typer (>=0.15.4,<0.16.0)",
 ]
 
+[project.urls]
+homepage = "https://github.com/droogg/ragbee_fw"
+repository = "https://github.com/droogg/ragbee_fw"
+
+[project.scripts]
+ragbee_cli = "ragbee_fw.cli:app"
+
+[tool.poetry]
+packages = [{include = "ragbee_fw", from ="src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

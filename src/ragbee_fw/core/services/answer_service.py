@@ -9,9 +9,9 @@ retriever and LLM implementations.
 
 from typing import List
 
-from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.llm_port import LLMPort
-from src.ragbee_fw.core.ports.retriever_port import RetrieverPort
+from ragbee_fw.core.models.document import Document
+from ragbee_fw.core.ports.llm_port import LLMPort
+from ragbee_fw.core.ports.retriever_port import RetrieverPort
 
 
 class AnswerService:

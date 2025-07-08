@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Protocol
 
-from src.ragbee_fw.core.models.document import Document
+from ragbee_fw.core.models.document import Document
 
 
 class DataLoaderPort(Protocol):

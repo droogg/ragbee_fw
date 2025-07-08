@@ -10,7 +10,7 @@ from typing import Dict, List, Optional, Tuple, Union
 
 from huggingface_hub import ChatCompletionOutput, InferenceClient
 
-from src.ragbee_fw.core.ports.llm_port import BaseLLM
+from ragbee_fw.core.ports.llm_port import BaseLLM
 
 
 class HuggingFaceInferenceAdapter(BaseLLM):
@@ -51,7 +51,10 @@ class HuggingFaceInferenceAdapter(BaseLLM):
         )
 
     def generate(
-        self, prompt: str, max_new_tokens: int = 256, return_full_response: bool = False
+        self,
+        prompt: str,
+        max_new_tokens: int = 2048,
+        return_full_response: bool = False,
     ) -> Union[str | None, Tuple[str | None, ChatCompletionOutput | str | None]]:
         """Generate a completion for *prompt*.
 

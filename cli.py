@@ -1,19 +1,20 @@
-import os
+# import os
 import pickle
-import sys
+
+# import sys
 from pathlib import Path
 
-sys.path.append(os.path.abspath(path=".."))
+# sys.path.append(os.path.abspath(path=".."))
 import typer
 
-from src.ragbee_fw.core.services.answer_service import AnswerService
-from src.ragbee_fw.core.services.ingestion_service import IngestionService
-from src.ragbee_fw.infrastructure.data_loader.file_loader import FileSystemLoader
-from src.ragbee_fw.infrastructure.llm_clients.huggingface_client import (
+from ragbee_fw.core.services.answer_service import AnswerService
+from ragbee_fw.core.services.ingestion_service import IngestionService
+from ragbee_fw.infrastructure.data_loader.file_loader import FileSystemLoader
+from ragbee_fw.infrastructure.llm_clients.huggingface_client import (
     HuggingFaceInferenceAdapter,
 )
-from src.ragbee_fw.infrastructure.retriever.bm25_client import BM25Client
-from src.ragbee_fw.infrastructure.text_splitter.recursive_text_splitter import (
+from ragbee_fw.infrastructure.retriever.bm25_client import BM25Client
+from ragbee_fw.infrastructure.text_splitter.recursive_text_splitter import (
     RecursiveTextSplitter,
 )
 

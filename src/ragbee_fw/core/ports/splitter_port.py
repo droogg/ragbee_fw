@@ -9,7 +9,7 @@ abstract convenience base (:class:`BaseTextSplitter`) that enforces the
 from abc import ABC, abstractmethod
 from typing import List, Protocol
 
-from src.ragbee_fw.core.models.document import Document
+from ragbee_fw.core.models.document import Document
 
 
 class TextSplitterPort(Protocol):

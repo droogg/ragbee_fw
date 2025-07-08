@@ -23,7 +23,7 @@ backend without changing business logic.
 from abc import ABC, abstractmethod
 from typing import List, Protocol
 
-from src.ragbee_fw.core.models.document import Document
+from ragbee_fw.core.models.document import Document
 
 
 class RetrieverPort(Protocol):

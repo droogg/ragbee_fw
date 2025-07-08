@@ -29,8 +29,8 @@ from typing import List
 
 from rank_bm25 import BM25Okapi
 
-from src.ragbee_fw.core.models.document import Document
-from src.ragbee_fw.core.ports.retriever_port import RetrieverPort
+from ragbee_fw.core.models.document import Document
+from ragbee_fw.core.ports.retriever_port import RetrieverPort
 
 
 class BM25Client(RetrieverPort):
