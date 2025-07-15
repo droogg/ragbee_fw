@@ -75,7 +75,7 @@ class AnswerService:
             >>> print(answer)
         """
         docs: List[Document] = self.retriever.retrieve(query, top_k)
-        context = "\n\n".join(f"[i + 1] {doc.text}" for i, doc in enumerate(docs))
+        context = "\n\n".join(f"[{i + 1}] {doc.text}" for i, doc in enumerate(docs))
         if prompt_template:
             prompt = prompt_template.format(context=context, query=query)
         else:

@@ -38,7 +38,7 @@ class HuggingFaceInferenceAdapter(BaseLLM):
     def __init__(
         self,
         model_name: str,
-        token: Optional[str],
+        token: Optional[str] | None = None,
         provider: Optional[str] = "auto",
         base_url: Optional[str] = None,
     ) -> None:
