@@ -1,0 +1,26 @@
+data_loader:
+  type: file_loader
+  path: /workspace/documents/
+
+text_chunker:
+  type: recursive_splitter
+  chunk_size: 1000
+  chunk_overlap: 200
+  separators:
+
+retriever:
+  type: bm25
+  top_k: 5
+
+llm:
+  type: HF
+  model_name: meta-llama/Llama-4-Scout-17B-16E-Instruct
+  token: null
+  provider: cerebras
+  base_url:
+  prompt: |
+    You are an intelligent assistant. 
+    Answer the question based on additional information found 
+    on the topic of the question in the user knowledge base.
+  max_new_tokens: 2048
+  return_full_response: True
