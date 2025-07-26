@@ -118,13 +118,12 @@ class DIContainer:
         Returns:
             AnswerService: Service responsible for answering user questions.
         """
-        retriever = self._cache.get("retriever")
-        if retriever:
-            if self.config.retriever.type == "bm25":
-                retriever = self._cache["retriever_with_index"]
-            else:
-                retriever = self._cache["retriever"]
-        else:
+        retriever = None
+        if self.config.retriever.type == "bm25":
+            retriever = self._cache.get("retriever_with_index")
+        if retriever is None:
+            retriever = self._cache.get("retriever")
+        if retriever is None:
             retriever = self._build_module("retriever")
 
         service = AnswerService(retriever=retriever, llm=self.build("llm"))
