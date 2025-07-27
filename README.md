@@ -1,25 +1,29 @@
-# RAGBee FW
+<p align="center">
+  <img src="ragbee_logo.png" alt="RAGBee logo" width="200"/>
+</p>
+
+# 🐝 RAGBee FW
 
 Lightweight Retrieval-Augmented Generation framework for small and medium projects. RAGBee lets you ingest local documents, build a search index and query an LLM with relevant context through a simple CLI or Python API.
 
-## Features
+## ✨ Features
 
-- **Ports & Adapters architecture.** Core contracts live in `core.ports`; plug-in implementations reside in `infrastructure.*`.
-- **Dependency Injection container.** `DIContainer` wires components from a YAML configuration.
-- **CLI utility.** `ragbee_cli` provides `ingest`, `ask` and `shell` commands.
-- **LLM agnostic.** Works with Hugging Face Inference API by default; custom adapters can be registered.
-- **Extensible.** Add your own loaders, splitters or retrievers via the adapter registry.
-- **MIT licensed.** Free for commercial use.
+- 🧩 **Ports & Adapters architecture.** Core contracts live in `core.ports`; plug-in implementations reside in `infrastructure.*`.
+- 🔌 **Dependency Injection container.** `DIContainer` wires components from a YAML configuration.
+- 🖥 **CLI utility.** `ragbee_cli` provides `ingest`, `ask` and `shell` commands.
+- 🤖 **LLM agnostic.** Works with Hugging Face Inference API by default; custom adapters can be registered.
+- 🔧 **Extensible.** Add your own loaders, splitters or retrievers via the adapter registry.
+- 📜 **MIT licensed.** Free for commercial use.
 
-## Installation
+## 📦 Installation
 
 ```bash
 pip install ragbee-fw
 ```
 
-Requires Python 3.10 or newer.
+🐍 Requires Python 3.10 or newer.
 
-## Quick start
+## 🚀 Quick start
 
 1. Prepare a configuration file (see [example/exampl_app_config.yml](example/exampl_app_config.yml)).
 2. Build the index:
@@ -40,7 +44,7 @@ Interactive session:
 ragbee_cli shell path/to/config.yml
 ```
 
-### Minimal configuration
+### 🪶 Minimal configuration
 
 ```yaml
 data_loader:
@@ -71,7 +75,7 @@ llm:
   return_full_response: True
 ```
 
-## Python API
+## 🐍 Python API
 
 ```python
 from ragbee_fw import DIContainer, load_config
@@ -88,7 +92,7 @@ answer = container.build_answer_service()
 print(answer.generate_answer("What is RAG?", top_k=3))
 ```
 
-## Architecture
+## 🧱 Architecture
 
 ```text
 ┌───────────────────┐
@@ -108,7 +112,8 @@ print(answer.generate_answer("What is RAG?", top_k=3))
 └───────────────────┘
 ```
 
-The CLI and API rely on the dependency injection container to build services. Adapters are resolved from the registry defined in `DIContainer`.
+> 🧠 The CLI and API rely on the dependency injection container to build services. 
+> 🧩 Adapters are resolved from the registry defined in `DIContainer`.
 
 ## 📚 Documentation
 
